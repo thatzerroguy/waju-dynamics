@@ -33,9 +33,9 @@ const Header: React.FC = () => {
         </nav>
 
         {/* Logo center */}
-        <div className="flex items-center gap-2">
+        <a href='#' className="flex items-center gap-2">
           <AppLogo size={180} />
-        </div>
+        </a>
 
         {/* Right CTA */}
         <div className="flex items-center gap-6">
