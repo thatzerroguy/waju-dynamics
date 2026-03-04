@@ -59,13 +59,13 @@ const QuoteSection: React.FC = () => {
             </p>
             <div className="flex flex-col gap-4">
               <a
-                href="tel:+234904915555"
+                href="tel:+2349049155555"
                 className="flex items-center gap-3 group"
               >
                 <div className="w-9 h-9 border border-charcoal/15 flex items-center justify-center group-hover:bg-charcoal transition-colors">
                   <Icon name="PhoneIcon" size={16} variant="outline" className="text-charcoal group-hover:text-cream transition-colors" />
                 </div>
-                <span className="text-sm font-bold">+234 904 915 555</span>
+                <span className="text-sm font-bold">+234 904 915 5555</span>
               </a>
               <a
                 href="mailto:info@wajudynamics.com"
@@ -107,7 +107,7 @@ const QuoteSection: React.FC = () => {
                 required
                 value={form.name}
                 onChange={handleChange}
-                placeholder="James Hartwell"
+                placeholder="Olatunide Eze"
                 className="bg-transparent text-charcoal text-sm font-medium placeholder:text-charcoal/25 focus:outline-none"
               />
             </div>
@@ -123,7 +123,7 @@ const QuoteSection: React.FC = () => {
                 required
                 value={form.company}
                 onChange={handleChange}
-                placeholder="Hartwell Construction LLC"
+                placeholder="Tunde Construction LLC"
                 className="bg-transparent text-charcoal text-sm font-medium placeholder:text-charcoal/25 focus:outline-none"
               />
             </div>
@@ -139,7 +139,7 @@ const QuoteSection: React.FC = () => {
                 required
                 value={form.phone}
                 onChange={handleChange}
-                placeholder="+1 (312) 555 0140"
+                placeholder="+234 901 555 0140"
                 className="bg-transparent text-charcoal text-sm font-medium placeholder:text-charcoal/25 focus:outline-none"
               />
             </div>
@@ -155,7 +155,7 @@ const QuoteSection: React.FC = () => {
                 required
                 value={form.email}
                 onChange={handleChange}
-                placeholder="james@hartwellconstruction.com"
+                placeholder="eze@tundeconstruction.com"
                 className="bg-transparent text-charcoal text-sm font-medium placeholder:text-charcoal/25 focus:outline-none"
               />
             </div>
@@ -172,11 +172,10 @@ const QuoteSection: React.FC = () => {
                 className="bg-transparent text-charcoal text-sm font-medium focus:outline-none appearance-none cursor-pointer"
               >
                 <option value="">Select a service...</option>
-                <option value="aggregate">Aggregate & Gravel</option>
-                <option value="concrete">Concrete & Asphalt</option>
-                <option value="steel">Steel & Fabricated Materials</option>
-                <option value="earthworks">Excavation & Soil Removal</option>
-                <option value="oversized">Oversized / Special Load</option>
+                <option value="haulage">Fuel Hualage and Delivery</option>
+                <option value="concrete">Heavy Duty Machinery Rentals</option>
+                <option value="steel">Real Estate Solution</option>
+                <option value="earthworks">Contruction</option>
               </select>
             </div>
 
@@ -200,7 +199,7 @@ const QuoteSection: React.FC = () => {
               <p className="text-[11px] text-muted">* Required fields</p>
               <button
                 type="submit"
-                className="flex items-center gap-3 bg-charcoal text-cream text-[11px] font-bold uppercase tracking-widest2 px-8 py-4 hover:bg-mid transition-colors group"
+                className="flex items-center gap-3 bg-[#001D3C] text-cream text-[11px] font-bold uppercase tracking-widest2 px-8 py-4 hover:bg-mid transition-colors group"
               >
                 Submit Quote Request
                 <Icon

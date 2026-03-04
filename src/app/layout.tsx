@@ -13,13 +13,13 @@ export const metadata: Metadata = {
   description: 'Waju Dynamics delivers aggregate, concrete, steel, and bulk materials to construction sites across the region. 18 years of on-time delivery, 850K+ tons moved.',
   icons: {
     icon: [
-      { url: '/assets/images/app_logo.png', type: 'image/x-icon' }
+      { url: '/assets/images/logo.png', type: 'image/x-icon' }
     ],
   },
   openGraph: {
     title: 'Waju Dynamics — Haulage Delivery You Can Rely On',
     description: 'Aggregate, concrete, steel & bulk material delivery. 18 years, 850K+ tons moved.',
-    images: [{ url: '/assets/images/app_logo.png', width: 1200, height: 630 }],
+    images: [{ url: '/assets/images/logo.png', width: 1200, height: 630 }],
   },
 };
 

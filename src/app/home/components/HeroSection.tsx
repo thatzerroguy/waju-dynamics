@@ -20,7 +20,7 @@ const slides = [
 const stats = [
 { value: '4,200+', label: 'Loads Delivered' },
 { value: '850K', label: 'Litres Transported' },
-{ value: '18 Yrs', label: 'In Operation' }];
+{ value: '4 Yrs', label: 'In Operation' }];
 
 
 const HeroSection: React.FC = () => {
@@ -66,7 +66,7 @@ const HeroSection: React.FC = () => {
 
         {/* Hero text */}
         <div className="absolute bottom-10 left-8 md:bottom-14 md:left-12 z-20 text-cream">
-          <p className="text-[11px] font-bold uppercase tracking-widest2 mb-5 opacity-70">
+          <p className="text-[13px] font-bold uppercase tracking-widest2 mb-5 opacity-95">
             // Fuel Haulage · Equipment Hire · Real Estate
           </p>
           <h1
@@ -85,13 +85,13 @@ const HeroSection: React.FC = () => {
           <div className="flex items-center gap-6 mt-6">
             <a
               href="#quote"
-              className="inline-block bg-cream text-charcoal text-[11px] font-bold uppercase tracking-widest2 px-6 py-3 hover:bg-stone transition-colors">
+              className="inline-block bg-[#001D3C] text-white text-[11px] font-bold uppercase tracking-widest2 px-6 py-3 hover:bg-stone transition-colors">
               
               Get a Quote
             </a>
             <a
               href="#services"
-              className="text-[11px] font-bold uppercase tracking-widest2 text-cream/70 border-b border-cream/40 pb-0.5 hover:text-cream hover:border-cream transition-colors">
+              className="text-[11px] font-bold uppercase tracking-widest2 text-[#FEBE01] border-b border-cream/40 pb-0.5 hover:text-cream hover:border-cream transition-colors">
               
               Our Services
             </a>
@@ -114,21 +114,21 @@ const HeroSection: React.FC = () => {
       </div>
 
       {/* ── Stats row (below carousel) ── */}
-      <div className="grid grid-cols-3 border-t border-charcoal/10">
+      <div className="grid grid-cols-3 border-t bg-[#001D3C] hover:text-charcoal">
         {stats.map((stat, i) =>
         <div
           key={i}
           className={`stat-card flex flex-col justify-between p-6 md:p-10 cursor-default ${
-          i < stats.length - 1 ? 'border-r border-charcoal/10' : ''}`
+          i < stats.length - 1 ? 'border-r bg-[#001D3C]' : ''}`
           }>
           
             {/* Top accent line */}
-            <div className="w-8 h-px bg-stone mb-4" />
+            <div className="w-8 h-px bg-[#001D3C] mb-4" />
             <div>
-              <p className="font-serif text-4xl md:text-5xl tracking-tighter text-charcoal">
+              <p className="font-serif text-4xl md:text-5xl tracking-tighter text-[#FEBE01]">
                 {stat.value}
               </p>
-              <p className="text-[11px] font-bold uppercase tracking-widest2 text-muted mt-1">
+              <p className="text-[11px] font-bold uppercase tracking-widest2 text-[#FEBE01] mt-1">
                 {stat.label}
               </p>
             </div>

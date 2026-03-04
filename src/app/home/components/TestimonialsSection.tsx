@@ -15,11 +15,11 @@ interface Testimonial {
 const featured: Testimonial = {
   quote:
   "Waju Dynamics moved 12,000 tons of aggregate for our I-94 interchange project over six weeks. Not one missed delivery window. When you're pouring bridge decks, that kind of reliability isn't a nice-to-have — it's everything.",
-  name: 'Marcus Webb',
+  name: 'Olatunde Charles',
   role: 'Senior Project Manager',
   company: 'Bridgepoint Civil',
   project: 'I-94 Interchange Expansion, Illinois',
-  avatar: "https://img.rocket.new/generatedImages/rocket_gen_img_179ebd6f2-1763294255544.png",
+  avatar: "/assets/images/man-one.png",
   avatarAlt: 'Marcus Webb, Senior Project Manager at Bridgepoint Civil, professional headshot'
 };
 
@@ -27,11 +27,11 @@ const sideReviews: Testimonial[] = [
 {
   quote:
   "We switched to Waju Dynamics after two failed contractors. Their GPS tracking alone saved us 4 hours a week in coordination calls. The site runs smoother now.",
-  name: 'Diane Kowalski',
+  name: 'Oluwatayo Alex',
   role: 'Site Superintendent',
   company: 'Lakefront Developments',
   project: 'Mixed-Use Tower, Chicago',
-  avatar: "https://img.rocket.new/generatedImages/rocket_gen_img_1d28a69ed-1768369290260.png",
+  avatar: "/assets/images/man-two.png",
   avatarAlt: 'Diane Kowalski, Site Superintendent at Lakefront Developments'
 },
 {
@@ -41,17 +41,17 @@ const sideReviews: Testimonial[] = [
   role: 'General Contractor',
   company: 'Okafor Building Group',
   project: 'Downtown Parking Structure, Milwaukee',
-  avatar: "https://img.rocket.new/generatedImages/rocket_gen_img_16a8ba208-1772224485154.png",
+  avatar: "/assets/images/man-three.png",
   avatarAlt: 'Terrence Okafor, General Contractor at Okafor Building Group'
 },
 {
   quote:
   "I've worked with a dozen haulage companies. Waju Dynamics is the only one that's never made me look bad in front of a client.",
-  name: 'Priya Nambiar',
+  name: 'Okechukwu Uzor',
   role: 'Project Engineer',
   company: 'Summit Infrastructure',
   project: 'Highway 41 Widening, Wisconsin',
-  avatar: "https://img.rocket.new/generatedImages/rocket_gen_img_1b4eedd59-1772170598258.png",
+  avatar: "/assets/images/man-four.png",
   avatarAlt: 'Priya Nambiar, Project Engineer at Summit Infrastructure'
 }];
 
@@ -76,7 +76,7 @@ const TestimonialsSection: React.FC = () => {
     <section
       id="projects"
       ref={sectionRef}
-      className="bg-charcoal text-cream relative overflow-hidden noise-overlay">
+      className="bg-[#001D3C] text-cream relative overflow-hidden noise-overlay">
       
       {/* Background ghost text */}
       <div
