@@ -1,0 +1,244 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --cream: #F5F3EF;
+  --charcoal: #0A0A0A;
+  --mid: #1C1A17;
+  --stone: #C8B89A;
+  --muted: #6B6560;
+  --border: rgba(10, 10, 10, 0.1);
+  --border-dark: rgba(245, 243, 239, 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--charcoal);
+  font-family: 'Manrope', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+.font-serif {
+  font-family: 'DM Serif Display', serif;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-thumb { background: #c5c0b8; border-radius: 10px; }
+
+/* ── Text Reveal ── */
+.text-reveal-wrapper {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+}
+.text-reveal-content {
+  transform: translateY(110%);
+  opacity: 0;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease;
+  display: block;
+}
+.reveal-active .text-reveal-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ── Scroll Reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Scale-Fade Reveal (services rows & testimonials) ── */
+.reveal-scale {
+  opacity: 0;
+  transform: translateY(2.5rem) scale(0.97);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-scale.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* ── Delay Utilities ── */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+.delay-700 { transition-delay: 0.7s; }
+
+/* ── Carousel ── */
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  transition: opacity 1.5s ease-in-out;
+  opacity: 0;
+  overflow: hidden;
+}
+.carousel-slide.active { opacity: 1; }
+.carousel-slide img {
+  transform: scale(1);
+  transition: transform 10s ease-out;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.carousel-slide.active img { transform: scale(1.08); }
+
+/* ── Marquee ── */
+.marquee-container {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+}
+.marquee-content {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  min-width: 100%;
+  animation: marquee-scroll 40s linear infinite;
+}
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+/* ── Nav link underline ── */
+.nav-link {
+  position: relative;
+  overflow: hidden;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: translateX(-101%);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-link:hover::after {
+  transform: translateX(0);
+}
+
+/* ── Image hover zoom ── */
+.img-zoom {
+  overflow: hidden;
+}
+.img-zoom img {
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.img-zoom:hover img {
+  transform: scale(1.04);
+}
+
+/* ── Noise texture overlay ── */
+.noise-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.035;
+}
+
+/* ── Section divider line ── */
+.line-h {
+  height: 1px;
+  background: var(--border);
+  width: 100%;
+}
+.line-h-dark {
+  height: 1px;
+  background: var(--border-dark);
+  width: 100%;
+}
+
+/* ── Stat card hover ── */
+.stat-card {
+  transition: background-color 0.4s ease;
+}
+.stat-card:hover {
+  background-color: #ffffff;
+}
+
+/* ── Service row hover ── */
+.service-row {
+  transition: background-color 0.4s ease;
+}
+.service-row:hover {
+  background-color: #ffffff;
+}
+
+/* ── Quote mark ── */
+.big-quote::before {
+  content: '"';
+  font-family: 'DM Serif Display', serif;
+  font-size: 12rem;
+  line-height: 1;
+  position: absolute;
+  top: -3rem;
+  left: -2rem;
+  opacity: 0.06;
+  color: var(--cream);
+  pointer-events: none;
+}
+
+/* ── Ken Burns keyframes ── */
+@keyframes ken-burns-1 {
+  0%   { transform: scale(1)    translate(0%, 0%); }
+  100% { transform: scale(1.12) translate(-2%, -1.5%); }
+}
+@keyframes ken-burns-2 {
+  0%   { transform: scale(1)    translate(0%, 0%); }
+  100% { transform: scale(1.12) translate(2%, 1.5%); }
+}
+@keyframes ken-burns-3 {
+  0%   { transform: scale(1)    translate(0%, 0%); }
+  100% { transform: scale(1.1)  translate(-1.5%, 2%); }
+}
+@keyframes ken-burns-4 {
+  0%   { transform: scale(1)    translate(0%, 0%); }
+  100% { transform: scale(1.1)  translate(1.5%, -2%); }
+}
+
+/* Ken Burns applied to service images when row is active */
+.service-img-wrap img {
+  transform-origin: center center;
+  transition: none;
+}
+.reveal-scale.active .service-img-wrap.kb-1 img { animation: ken-burns-1 14s ease-in-out forwards; }
+.reveal-scale.active .service-img-wrap.kb-2 img { animation: ken-burns-2 14s ease-in-out forwards; }
+.reveal-scale.active .service-img-wrap.kb-3 img { animation: ken-burns-3 14s ease-in-out forwards; }
+.reveal-scale.active .service-img-wrap.kb-4 img { animation: ken-burns-4 14s ease-in-out forwards; }
+
+/* ── Parallax ── */
+.parallax-img {
+  will-change: transform;
+}
