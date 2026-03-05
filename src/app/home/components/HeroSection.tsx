@@ -118,7 +118,7 @@ const HeroSection: React.FC = () => {
         {stats.map((stat, i) =>
         <div
           key={i}
-          className={`stat-card flex flex-col justify-between p-6 md:p-10 cursor-default ${
+          className={`stat-card flex flex-col justify-between p-3 md:p-7 cursor-default ${
           i < stats.length - 1 ? 'border-r bg-[#001D3C]' : ''}`
           }>
           
