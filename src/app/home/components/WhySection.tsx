@@ -43,8 +43,8 @@ interface Differentiator {
 const differentiators: Differentiator[] = [
   {
     icon: 'MapPinIcon',
-    title: 'Real-Time GPS Tracking',
-    body: 'Every truck in our fleet transmits live location data. Share a tracking link with your site super and eliminate "where\'s my load?" calls for good.',
+    title: 'Quick and Speedy Delivery',
+    body: 'Always expect on-time delivery. No matter the distance, our drivers will get your load where it needs to go.',
     metric: '100% Fleet Visibility',
   },
   {
@@ -56,8 +56,8 @@ const differentiators: Differentiator[] = [
   {
     icon: 'ShieldCheckIcon',
     title: 'DOT & OSHA Compliance',
-    body: 'Every driver holds current CDL-A certification. Every vehicle passes bi-annual DOT inspection. Zero compliance incidents in 7 consecutive years.',
-    metric: '7 Years Clean Record',
+    body: 'Every driver holds current CDL-A certification. Every vehicle passes bi-annual DOT inspection. Zero compliance incidents in 2 consecutive years.',
+    metric: '2 Years Clean Record',
   },
   {
     icon: 'TruckIcon',

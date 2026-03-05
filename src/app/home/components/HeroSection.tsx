@@ -18,8 +18,8 @@ const slides = [
 
 
 const stats = [
-{ value: '4,200+', label: 'Loads Delivered' },
-{ value: '850K', label: 'Litres Transported' },
+{ value: '300+', label: 'Loads Delivered' },
+{ value: '50K', label: 'Litres Transported' },
 { value: '4 Yrs', label: 'In Operation' }];
 
 
