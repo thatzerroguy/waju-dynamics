@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Project {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  name        String
+  category    String
+  categorySlug String
+  client      String?
+  location    String?
+  duration    String?
+  year        String?
+  description String?
+  mainImage   String?
+  media       String?  // JSON array: [{type, url, alt}]
+  metrics     String?  // JSON array: [{label, value}]
+  status      String   @default("active")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Service {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  status      String   @default("active")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
