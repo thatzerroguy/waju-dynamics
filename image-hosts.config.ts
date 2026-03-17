@@ -19,4 +19,8 @@ export const imageHosts = [
         protocol: 'https',
         hostname: 'img.rocket.new',
     },
+    {
+        protocol: 'https',
+        hostname: 'owll2yxldppoogxd.public.blob.vercel-storage.com',
+    },
 ];
